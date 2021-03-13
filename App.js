@@ -1,11 +1,18 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-
+import apiSearch from './api'
+const { useState, useEffect } = React
 export default function App () {
+  const [movieInfo, setMovieInfo] = useState('')
+
+  useEffect(() => {
+    setMovieInfo(JSON.stringify(apiSearch('matrix')))
+  }, [])
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>{movieInfo}</Text>
       <StatusBar style='auto' />
     </View>
   )
