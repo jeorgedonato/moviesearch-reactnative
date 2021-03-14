@@ -6,8 +6,12 @@ const { useState, useEffect } = React
 export default function App () {
   const [movieInfo, setMovieInfo] = useState('')
 
-  useEffect(() => {
-    setMovieInfo(JSON.stringify(apiSearch('matrix')))
+  useEffect(async () => {
+    const movieFunction = async () => {
+      setMovieInfo(JSON.stringify(await apiSearch('matrix')))
+    }
+
+    movieFunction()
   }, [])
 
   return (
