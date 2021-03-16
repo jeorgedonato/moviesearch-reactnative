@@ -1,23 +1,22 @@
-import { StatusBar } from 'expo-status-bar'
+// import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import apiSearch from './api'
-const { useState, useEffect } = React
+import { StyleSheet, View } from 'react-native'
+import SearchBar from './components/SearchBar'
+
 export default function App () {
-  const [movieInfo, setMovieInfo] = useState('')
+  // const [movieInfo, setMovieInfo] = useState('')
 
-  useEffect(async () => {
-    const movieFunction = async () => {
-      setMovieInfo(JSON.stringify(await apiSearch('matrix')))
-    }
+  // const movieFunction = async () => {
+  //   setMovieInfo(JSON.stringify(await apiSearch('matrix')))
+  // }
 
-    movieFunction()
-  }, [])
+  // useEffect(() => {
+  //   movieFunction()
+  // }, [])
 
   return (
     <View style={styles.container}>
-      <Text>{movieInfo}</Text>
-      <StatusBar style='auto' />
+      <SearchBar />
     </View>
   )
 }
