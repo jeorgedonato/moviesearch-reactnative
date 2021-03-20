@@ -4,16 +4,6 @@ import { StyleSheet, View } from 'react-native'
 import SearchBar from './components/SearchBar'
 
 export default function App () {
-  // const [movieInfo, setMovieInfo] = useState('')
-
-  // const movieFunction = async () => {
-  //   setMovieInfo(JSON.stringify(await apiSearch('matrix')))
-  // }
-
-  // useEffect(() => {
-  //   movieFunction()
-  // }, [])
-
   return (
     <View style={styles.container}>
       <SearchBar />
