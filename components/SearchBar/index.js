@@ -31,9 +31,10 @@ const SearchBar = () => {
             <Picker.Item label='TV' value='TV' />
           </Picker>
           <Button title='Search' onPress={() => handleSearchClick()} />
+        </View>
+        <View>
           <SearchResults />
         </View>
-
       </MovieContext.Provider>
     </>
   )
@@ -45,26 +46,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexWrap: 'wrap',
     display: 'flex',
-    height: '50',
+    height: 50,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: 30
   },
   text_box: {
-    width: '30',
+    width: 60,
     height: 40,
-    marginHorizontal: '10px',
+    marginHorizontal: 10,
     borderColor: 'black',
-    border: 'solid',
+    // border: 'solid',
     padding: 7,
     borderRadius: 4
   },
   picker_box: {
-    width: '30',
+    width: 60,
     height: 40,
     padding: 7,
-    marginHorizontal: '10px',
+    marginHorizontal: 10,
     borderColor: 'black',
-    border: 'solid',
+    // border: 'solid',
     borderRadius: 4
   }
 })
